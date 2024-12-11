@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Square</h2>
+    <input type="number" id="square">
+    <button onclick="squarenum()">Click here to display square</button>
+    <hr>
+<h2>Even Or Odd</h2>
+    <input type="number" id="evenOrOdd"> 
+    <button onclick="evenodd()">Click here!</button>
+    <hr>
+    <h2>TABLES</h2>
+    <input type="number" id="tableofnum">
+    <button onclick="tableofn()">Click here to display table</button>
+    <hr>
+    <h2>1 to n</h2>
+    <input type="number" id="numtilln">
+    <button onclick="tilln()">1 to n</button>
+    <hr>
+    <h2>Enter color</h2>
+    <input type="text" id="color">
+    <button onclick="colors()">Submit</button>
+    <script>
+
+        
+    
+        function squarenum()
+        {
+           //  debugger
+            let number=document.getElementById("square").value;
+            // console.log("click me ")
+            document.write(number*number);
+
+        }
+
+        function evenodd()
+        {
+            let num=document.getElementById("evenOrOdd").value;
+            if(num%2==0)
+            document.write("<h1 style= 'color: red'>"+"Even"+"</h1>");
+        else
+        document.write("Odd");
+
+        }
+        function tableofn()
+        {
+            let num=document.getElementById("tableofnum").value;
+            let i=1;
+            while(i<=10)
+        {
+            document.write("<h3>"+(i*num)+"</h3>")
+            i++;
+            
+        }
+
+        }
+
+        function tilln()
+        {
+           let num=document.getElementById("numtilln").value 
+           let i=1;
+           while(i<=num)
+           {
+            document.write("<h2>"+i+"</h2>");
+            i++;
+           }
+        }
+
+        function colors()
+        {
+           let n=document.getElementById("color").value;
+           if(n=="red")
+           {
+            document.body.style.backgroundColor="red";
+           }
+           else if(n=="green")
+           {
+            document.body.style.backgroundColor="green";
+           }
+           else if(n=="pink")
+           {
+            document.body.style.backgroundColor="pink";
+           }
+           else if(n=="blue")
+           {
+            document.body.style.backgroundColor="blue";
+           }
+        }
+    </script>
+</body>
+</html>
