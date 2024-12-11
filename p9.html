@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1=prompt("Enter first number")
+        n1=parseInt(n1);
+        let n2=parseInt(prompt("Enter second number"));
+
+    let choice=parseInt(prompt("Enter 1:add 2:sub 3:mul 4:div"))
+
+    switch(choice)
+    {
+        case 1:document.write("<h1> Addition is "+(n1+n2)+"</h1>")
+        break;
+        case 2: document.write("<h1> subs is "+(n1*n2)+"</h1>")
+        break;
+        case 3: document.write("<h1> Multiplication is "+(n1*n2)+"</h1>")
+        break;
+        case 4: document.write("<h1> Division is "+(n1/n2)+"</h1>")
+        break;
+        default:document.write("<h1> Invalid Input </h1>")
+    }
+    </script>
+</body>
+</html>
