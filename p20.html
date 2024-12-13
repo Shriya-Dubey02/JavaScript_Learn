@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container
+        {
+            border: 2px solid green;
+            height: 100px;
+            width: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="A"></div>
+    <script>
+       const container= document.getElementById("container");
+       // function k andhar function
+      // container.addEventListener("mouseover",()=>{ // click   // function()
+      container.addEventListener("click",(event)=>{
+        event.target.style.backgroundColor="red";
+        console.log(event.target.className);
+      });
+    // alert("hello")
+    // container.style.backgroundColor="orange"
+       // });
+
+
+    </script>
+</body>
+</html>
