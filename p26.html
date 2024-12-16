@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="subjects">
+
+    </ul>
+    <button onclick="add()">Add subjects</button>
+    <script>
+        const subjects=["HTML","CSS","JavaScript"]
+        function add()
+        {
+        const ul=document.getElementById("subjects")
+        for(let i=0;i<subjects.length;i++)
+    {
+        const li= document.createElement("li");
+        li.appendChild(document.createTextNode(subjects[i]));
+        ul.appendChild(li);
+    }
+        }
+    </script>
+</body>
+</html>
