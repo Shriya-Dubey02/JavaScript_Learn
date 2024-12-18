@@ -34,23 +34,46 @@
     <hr>
     <a href="https://www.amazon.in/?&tag=googhydrabk1-21&ref=pd_sl_5szpgfto9i_e&adgrpid=155259813593&hvpone=&hvptwo=&hvadid=674893540034&hvpos=&hvnetw=g&hvrand=7346523265262954212&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062237&hvtargid=kwd-64107830&hydadcr=14452_2316413&gad_source=1" id="link">Amazon</a>
 
-    <form action="">
+<!-- onsubmit is used to tell what to do after clicking the submit -->
+    <form action="" onsubmit="submitHandler" id="form">
+        <input type="text" name="username">
+        <input type="text" name="age">
         <input type="text">
         <input type="submit" value="submit">
     </form>
     <script>
         // Event bubbling: chote se bada child to parent
+        // by default event bubbling hota hai ,false hota hai
         // Event propogation: parent to child
+        // propogation main event bubbling and capturing
         document.getElementById("container").addEventListener("click",()=>{
             alert("Container")
-        })
+        },true)
         document.getElementById("box").addEventListener("click",(event)=>{
-            event.stopPropagation();// this method is used to stop propogation
+          //   event.stopPropagation();// this method is used to stop propogation
             alert("Box")
-        })
+        },true) // by default false hota hai
         document.getElementById("heading").addEventListener("click",(e)=>{
-            e.stopPropagation(); // e is event ka object
+           // e.stopPropagation(); // e is event ka object
             alert("Heading")
+        },true)
+
+// link ka default behaviour stop
+        document.getElementById("link").addEventListener("click",(event)=>{
+
+            event.preventDefault();
+        })
+
+        function submitHandler(event)
+        {
+            event.preventDefault();
+
+        }
+
+        document.getElementById("form").addEventListener("submit",(event)=>{
+            event.preventDefault();
+            console.log(event.target.age.value);
+            console.log(event.target.username.value);
         })
 
     </script>
