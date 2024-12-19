@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // this
+        const product={
+            productId:101,
+            productName:"Laptop",
+            productPrice:45000,
+            // details is a property and function is stored in it
+            details: function(){
+                return this.productId+" "+this.productName;
+            },
+            discount: function(){
+                return this.productPrice*0.8;
+
+        },
+        demo: function(name)
+        {
+            return "My name is"+ name;  
+        }
+     
+        }
+
+        const expense={
+            expenseId:1,
+            expenseName:"Gaming",
+            price:5000,
+            expenseDetails: function(){
+                return this.expenseName+" "+this.price;
+            }
+
+        }
+    </script>
+</body>
+</html>

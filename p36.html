@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeOut function is used to delay the code
+        // setTimeOut(function,time) 1000 for 1 sec, 500 for 1/2 sec
+
+        // Asynchronous behaviour of javascript 
+        // both methods will be executed together
+
+        function hello()
+        {
+            document.write("Hello Shriya");
+        }
+
+        function bye()
+        {
+            document.write("Bye");
+        }
+
+       //  setTimeout(hello,5000);
+
+        setTimeout(()=>{
+            hello();
+        },5000)
+
+        setTimeout(()=>{
+            bye();
+        },7000)
+    </script>
+</body>
+</html>
