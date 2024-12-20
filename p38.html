@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Callback function usage
+        function fetchData(callBack)
+        {
+            serverdata ="Data from the server";
+            callBack(serverdata);
+        }
+        function processData(data)
+        {
+            document.write(data+ " processData function");
+        }
+        fetchData(processData);
+    </script>
+</body>
+</html>
