@@ -7,12 +7,18 @@
 </head>
 <body>
     <script>
-        let i=1;
-        while(i<=10)
+        for(let i=1;i<=15;i++)
     {
-        document.write("<h1 style='color:green'> "+(i*5)+" </h1>");
-        i++;
+        if(i%2==0)
+    {
+        document.write("<h1>"+i+ " is Even" +"</h1>")
     }
+    else{
+        document.write("<h1>"+i+" is Odd"+ "</h1>")
+    }
+    }
+     
     </script>
+    
 </body>
 </html>
