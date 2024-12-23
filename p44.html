@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" id="image" width="40%">
+
+    <script>
+        // https://fakestoreapi.com/products/1
+
+        fetch("https://fakestoreapi.com/products/1")
+        .then(data=>data.json())
+        .then(data=>{console.log(data["image"],data["title"])
+        document.getElementById("image").src=data["image"];
+        })
+
+        
+
+    </script>
+</body>
+</html>

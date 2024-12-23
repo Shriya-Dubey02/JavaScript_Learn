@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="dogs">Click here</button>
+    <img src="" alt="" id="image">
+    <script>
+
+        document.getElementById("dogs").addEventListener("click",()=>{
+            fetch("https://dog.ceo/api/breeds/image/random").then(data=>data.json())
+            .then(data=>{console.log(data["message"]);
+            document.getElementById("image").src=data["message"];
+           // .then(document.getElementById("image").src=data["image"]);
+
+            });
+        })
+        
+    </script>
+</body>
+</html>

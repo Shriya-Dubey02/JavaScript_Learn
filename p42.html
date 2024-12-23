@@ -7,10 +7,9 @@
 </head>
 <body>
     <script>
-        for(let i=10;i<=20;i++)
-    {
-        document.write("<h1>"+i+"</h1>");
-    }
-    </script>
+        const promise= fetch("https://catfact.ninja/fact")
+      promise.then(data=>data.json())
+      .then(data=>console.log(data["fact"]+" "+data["length"])); // like stream api
+     </script>
 </body>
 </html>

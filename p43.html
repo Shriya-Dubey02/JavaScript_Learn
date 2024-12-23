@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="catFact">Click here</button>
+    <div id="fact"></div>
+    <script>
+       
+       document.getElementById("catFact").addEventListener("click",()=>{
+        const promise= fetch("https://catfact.ninja/fact")
+        promise.then(data=>data.json()).then(data=>{
+            document.getElementById("fact").innerHTML=data["fact"]
+        });
+       })
+
+    </script>
+</body>
+</html>

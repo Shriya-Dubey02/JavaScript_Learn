@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #B{
+            border: 2px solid green;
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="B"></div>
+    <script>
+        const c=document.getElementById("B");
+        c.addEventListener("mouseover",(event)=>{
+            event.target.style.backgroundColor="plum";
+            console.log(event.target.className);
+        });
+
+    </script>
+</body>
+</html>
