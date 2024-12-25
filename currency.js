@@ -17,6 +17,7 @@ document.getElementById("calculate").addEventListener("click",()=>{
     //    document.body.appendChild(h1);
 
     let answer=data["rates"][toCurrency]*amount;
-    document.getElementById("answer").textContent= amount+" "+fromCurrency+" = "+answer+" "+toCurrency
+    document.getElementById("answer").textContent= amount+" "+fromCurrency+" = "+answer+" "+toCurrency;
     })
 })
+
