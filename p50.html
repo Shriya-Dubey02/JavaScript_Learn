@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        async function processData() 
+        {
+            // FETCH RETURNS PROMISE KA OBJECT
+           const data = await fetch("https://api.exchangerate-api.com/v4/latest/USD")
+          //  console.log(data);
+          // json() returns promise ka object  therefore we can apply await on it 
+           const jsonData=await data.json();
+           console.log(jsonData["rates"]["INR"]);
+    
+        }
+
+        async function dictionary()
+        {
+            const response= await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/hello")
+           const dictData=await response.json();
+            console.log(dictData[0]["meanings"][1]["definitions"][0]["definition"]);
+
+        }
+
+        // processData();
+        dictionary();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Async and await returns promise object 
+// Async and await alternate of .then
+        function study()
+        {
+            return new Promise(function(resolve,reject){
+                let study=true;
+                if(study)
+                resolve({"id":101,"Name":"Shriya","studycompleted":"Yes"})
+               else
+               resolve({"id":101,"Name":"Shriya","studycompleted":"No"})
+            })
+        }
+        
+        function job()
+        {
+            return new Promise(function(resolve,reject)
+            {
+                let placed=true;
+                if(placed)
+                   resolve({companyName:"ABC"})
+                else{
+                    reject("Not placed")
+                }
+
+            })
+        }
+        // to use await function should be async  
+        async function processData()
+        {
+            const studyData=await study();
+            console.log(studyData)
+            const jobData=await job();
+            console.log(jobData)
+        }
+        processData();
+    </script>
+</body>
+</html>
