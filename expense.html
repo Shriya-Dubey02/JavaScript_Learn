@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function expense() {
+            const getExpense=await fetch("http://localhost:8080/expenses");
+            const jsondata=await getExpense.json();
+            console.log(jsondata["_embedded"]["expenses"][0]["amount"]);
+            
+        }
+        expense();
+    </script>
+</body>
+</html>
