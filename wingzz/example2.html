@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>First Name</h2>
+    <form id="formInput">
+    <input type="text" name="firstName" id="fname">
+    <br>
+    <h2>Last Name</h2>
+    <input type="text" name="lastName" id="lname"> 
+
+    <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("formInput").addEventListener("click",(event)=>{
+            event.preventDefault();
+
+            const fname= document.getElementById("fname").value;
+
+            const lname=document.getElementById("lname").value;
+
+            console.log(fname);
+            console.log(lname);
+
+        })
+    </script>
+</body>
+</html>
